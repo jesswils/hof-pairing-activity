@@ -1,53 +1,69 @@
 const hof = {};
 
-hof.identity = function() {};
+hof.identity = function (arg) {
+    return arg
+};
 
-hof.identityf = function() {};
 
-hof.add = function() {};
+hof.identityf = function (arg) {
+    function identityg() {
+        return arg
+    }
+    return identityg
+}
 
-hof.sub = function() {};
+hof.add = function (x, y) {
+    return x + y
+};
 
-hof.mul = function() {};
+hof.sub = function (x, y) {
+    return x - y
+};
 
-hof.inc = function() {};
+hof.mul = function (x, y) {
+    return x * y
+};
 
-hof.addf = function() {};
+hof.inc = function (x) {
 
-hof.curry = function() {};
+};
 
-hof.liftf = function() {};
+hof.addf = function () { };
 
-hof.twice = function() {};
+hof.curry = function () { };
 
-hof.composeu = function() {};
+hof.liftf = function () { };
 
-hof.composeb = function() {};
+hof.twice = function () { };
 
-hof.limit = function() {};
+hof.composeu = function () { };
 
-hof.from = function() {};
+hof.composeb = function () { };
 
-hof.to = function() {};
+hof.limit = function () { };
 
-hof.fromTo = function() {};
+hof.from = function () { };
 
-hof.element = function() {};
+hof.to = function () { };
 
-hof.collect = function() {};
+hof.fromTo = function () { };
 
-hof.filter = function() {};
+hof.element = function () { };
 
-hof.concat = function() {};
+hof.collect = function () { };
 
-hof.fibonaccif = function() {};
+hof.filter = function () { };
 
-hof.gensymf = function() {};
+hof.concat = function () { };
 
-hof.gensymff = function() {};
+hof.fibonaccif = function () { };
 
-hof.counter = function() {};
+hof.gensymf = function () { };
 
-hof.revokable = function() {};
+hof.gensymff = function () { };
+
+hof.counter = function () { };
+
+hof.revokable = function () { };
 
 module.exports = hof;
