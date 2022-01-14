@@ -25,7 +25,7 @@ hof.mul = function (x, y) {
 };
 
 hof.inc = function (x) {
-
+    return ++x
 };
 
 hof.addf = function () { };
