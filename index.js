@@ -42,9 +42,19 @@ hof.curry = function (func, calls) {
     return lilFunc
 };
 
-hof.liftf = function () { };
+hof.liftf = function (value) {
+    return function innerFunc(a) {
+        return function (b) {
+            return value(a,b)
+        }
+    }
+};
 
-hof.twice = function () { };
+hof.twice = function (func) {
+    return function (value) {
+        return func(value, value)
+    }
+};
 
 hof.composeu = function () { };
 

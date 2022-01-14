@@ -75,7 +75,7 @@ describe('Higher Order Functions', () => {
       it('will take a binary function and a single value as arguments and return a function', () => {
         expect(typeof hof.curry(hof.add, 5)).toBe('function');
       });
-      it.only('second invocation will return the result', () => {
+      it('second invocation will return the result', () => {
         const timesByThirty = hof.curry(hof.mul, 30);
         expect(timesByThirty(6)).toBe(hof.mul(30, 6));
       });
@@ -93,13 +93,6 @@ describe('Higher Order Functions', () => {
       });
     });
   });
-
-//  describe('once', () => {
-//    it('Add your first test here...', () => {
-//      // Write your own tests for once
-//    })
-//  })
-
   describe('Unary Functions', () => {
     describe('twice', () => {
       it('returns a function on first invocation', () => {
@@ -111,6 +104,9 @@ describe('Higher Order Functions', () => {
         expect(double(3)).toBe(hof.add(3, 3));
       });
     });
+
+
+
     describe('composeu', () => {
       it('returns a function on first invocation', () => {
         const add100 = (x) => x + 100;
