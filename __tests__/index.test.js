@@ -64,7 +64,7 @@ describe('Higher Order Functions', () => {
       it('returns the total of both invocations', () => {
         expect(hof.addf(3)(4)).toBe(7);
       });
-      it.only('returned function is reusable', () => {
+      it('returned function is reusable', () => {
         const add100 = hof.addf(100);
         expect(add100(5)).toBe(105);
         expect(add100(100)).toBe(200);
@@ -75,7 +75,7 @@ describe('Higher Order Functions', () => {
       it('will take a binary function and a single value as arguments and return a function', () => {
         expect(typeof hof.curry(hof.add, 5)).toBe('function');
       });
-      it('second invocation will return the result', () => {
+      it.only('second invocation will return the result', () => {
         const timesByThirty = hof.curry(hof.mul, 30);
         expect(timesByThirty(6)).toBe(hof.mul(30, 6));
       });

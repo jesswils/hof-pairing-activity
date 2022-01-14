@@ -35,7 +35,12 @@ hof.addf = function (total) {
     return plus
 };
 
-hof.curry = function () { };
+hof.curry = function (func, calls) {
+    function lilFunc(value) {
+        return func(calls,value)
+    }
+    return lilFunc
+};
 
 hof.liftf = function () { };
 
