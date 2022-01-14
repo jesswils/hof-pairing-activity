@@ -56,7 +56,12 @@ hof.twice = function (func) {
     }
 };
 
-hof.composeu = function () { };
+hof.composeu = function (func, func2) {
+    return function (value) {
+        const first = func(value)
+        return func2(first)
+    }
+};
 
 hof.composeb = function () { };
 

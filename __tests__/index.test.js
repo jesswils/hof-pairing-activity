@@ -104,9 +104,6 @@ describe('Higher Order Functions', () => {
         expect(double(3)).toBe(hof.add(3, 3));
       });
     });
-
-
-
     describe('composeu', () => {
       it('returns a function on first invocation', () => {
         const add100 = (x) => x + 100;
@@ -114,7 +111,7 @@ describe('Higher Order Functions', () => {
         const add150 = hof.composeu(add100, add50);
         expect(typeof add150).toBe('function');
       });
-      it('returns a value of given function on second invocation', () => {
+      it.only('returns a value of given function on second invocation', () => {
         const square = (x) => x * x;
         const double = (x) => x + x;
         const squareThenDouble = hof.composeu(square, double);
