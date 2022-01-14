@@ -64,7 +64,7 @@ describe('Higher Order Functions', () => {
       it('returns the total of both invocations', () => {
         expect(hof.addf(3)(4)).toBe(7);
       });
-      it('returned function is reusable', () => {
+      it.only('returned function is reusable', () => {
         const add100 = hof.addf(100);
         expect(add100(5)).toBe(105);
         expect(add100(100)).toBe(200);

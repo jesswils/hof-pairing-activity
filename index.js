@@ -28,7 +28,12 @@ hof.inc = function (x) {
     return ++x
 };
 
-hof.addf = function () { };
+hof.addf = function (total) {
+    function plus(num) {
+        return total + num
+    } 
+    return plus
+};
 
 hof.curry = function () { };
 
